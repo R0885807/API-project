@@ -10,7 +10,8 @@ origins = [
     "http://localhost:8080",
     "https://localhost.tiangolo.com"
     "http://127.0.0.1:8000",
-    "https://r0885807.github.io"
+    "https://r0885807.github.io",
+    "*"
 ]
 
 app.add_middleware(
