@@ -2,27 +2,31 @@
 <html>
 
 <head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/ss/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
     <script defer src="https://unpkg.com/alpinejs@3.5.0/dist/cdn.min.js"></script>
 </head>
 
 <body style="font-family: Verdana, Geneva, Tahoma, sans-serif;">
-    <div x-data="{
-        responsedata: {},
-        async getData() {
-            this.responsedata = await (await fetch('https://guitar-service-r0885807.cloud.okteto.net/guitars')).json();
-            console.log(this.responsedata)
-        }
+    <div>
+        <div x-data="{
+            responsedata: {},
+            async getData() {
+                this.responsedata = await (await fetch('https://guitar-service-r0885807.cloud.okteto.net/guitars')).json();
+                console.log(this.responsedata)
+            }
         
-    }
-    ">
-    <h1>Guitar API!</h1>
+        }
+        ">
+        <h1>Guitar API!</h1>
 
-        <button x-on:click="getData">Send get request</button>
-        Data returned: <strong x-text="responsedata.name">Placeholder</strong>
-        <div x-if="responsedata.image" style="max-height: 1000px;">
-            <img :src="responsedata.image">
+            <button x-on:click="getData">Send get request</button>
+            Data returned: <strong x-text="responsedata.name">Placeholder</strong>
+            <div x-if="responsedata.image" style="height: 500px;">
+                <img :src="responsedata.image">
+            </div>
+
         </div>
-
     </div>
 </body>
 
