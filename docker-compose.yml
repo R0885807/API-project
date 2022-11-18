@@ -1,6 +1,6 @@
 version: "3.9"
 services:
  guitar-service:
-  image: R0885807/API-project
+  image: r0885807/API-project
   ports:
    - "8000:8000"
