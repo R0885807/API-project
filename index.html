@@ -8,7 +8,7 @@
 </head>
 
 <body style="font-family: Verdana, Geneva, Tahoma, sans-serif;">
-    <div class="container">
+    <div class="container" style="background-color: beige;">
         <div x-data="{
             responsedata: {},
             async getData() {
@@ -19,10 +19,26 @@
         }
         ">
         <h1>Guitar API!</h1>
+        <hr>
+        <h3>Geef een willekeurige gitaar:</h3>
 
-            <button x-on:click="getData">Send get request</button>
-            Data returned: <strong x-text="responsedata.name">Placeholder</strong>
-            <div x-if="responsedata.image" style="width: 500px;">
+            <button x-on:click="getData">Geef een gitaar!</button>
+            <ul>
+                <li>
+                    <strong x-text="responsedata.name">Placeholder</strong>
+                </li>
+                <li>
+                    <strong x-text="responsedata.brand">Placeholder</strong>
+                </li>
+                <li>
+                    <strong x-text="responsedata.price">Placeholder</strong>
+                </li>
+                <li>
+                    <strong x-text="responsedata.year">Placeholder</strong>
+                </li>
+            </ol>
+            <strong x-text="responsedata.name">Placeholder</strong>
+            <div x-if="responsedata.image" style="width: 300px;">
                 <img :src="responsedata.image">
             </div>
 
