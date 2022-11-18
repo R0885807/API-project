@@ -8,7 +8,7 @@
 </head>
 
 <body style="font-family: Verdana, Geneva, Tahoma, sans-serif;">
-    <div>
+    <div class="container">
         <div x-data="{
             responsedata: {},
             async getData() {
@@ -22,7 +22,7 @@
 
             <button x-on:click="getData">Send get request</button>
             Data returned: <strong x-text="responsedata.name">Placeholder</strong>
-            <div x-if="responsedata.image" style="height: 500px;">
+            <div x-if="responsedata.image" style="width: 500px;">
                 <img :src="responsedata.image">
             </div>
 
