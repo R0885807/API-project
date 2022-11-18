@@ -35,7 +35,7 @@ guitar_robbe = {
     "brand": "Walden",
     "price": 190,
     "year": 2015
-    "image": https://images.pexels.com/photos/10343848/pexels-photo-10343848.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1
+    "image": "https://images.pexels.com/photos/10343848/pexels-photo-10343848.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
 }
 guitar_fender = {
     "name": "Player Stratocaster PF",
