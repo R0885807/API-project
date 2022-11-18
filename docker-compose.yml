@@ -3,4 +3,4 @@ services:
  guitar-service:
   image: R0885807/API-project
   ports:
-   -"8000:8000"
+   - "8000:8000"
