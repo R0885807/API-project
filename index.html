@@ -7,7 +7,7 @@
     <script defer src="https://unpkg.com/alpinejs@3.5.0/dist/cdn.min.js"></script>
 </head>
 
-<body style="font-family: Verdana, Geneva, Tahoma, sans-serif; background-color: rgb(139, 155, 171);">
+<body style="font-family: Verdana, Geneva, Tahoma, sans-serif; background-color: rgb(135, 147, 159);">
     <div class="container" >
         <div x-data="{
             responsedata: {},
@@ -38,7 +38,7 @@
                 </li>
             </ol>
             <div x-if="responsedata.image">
-                <img :src="responsedata.image" style="width: 300px;">
+                <img :src="responsedata.image" style="width: 300px; border: 3 solid darkslategray">
             </div>
 
         </div>
