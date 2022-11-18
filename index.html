@@ -18,7 +18,7 @@
         <button x-on:click="getData">Send get request</button>
         Data returned: <strong x-text="responsedata.name">Placeholder</strong>
         <div x-if="responsedata.image">
-            <img :src="responsedata.image">
+            <img :src="responsedata.image" style="max-height: 1000px" >
         </div>
 
     </div>
