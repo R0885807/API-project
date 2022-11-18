@@ -5,7 +5,7 @@
     <script defer src="https://unpkg.com/alpinejs@3.5.0/dist/cdn.min.js"></script>
 </head>
 
-<body>
+<body style="font-family: Verdana, Geneva, Tahoma, sans-serif;">
     <div x-data="{
         responsedata: {},
         async getData() {
@@ -15,10 +15,12 @@
         
     }
     ">
+    <h1>Guitar API!</h1>
+
         <button x-on:click="getData">Send get request</button>
         Data returned: <strong x-text="responsedata.name">Placeholder</strong>
-        <div x-if="responsedata.image">
-            <img :src="responsedata.image" style="max-height: 1000px" >
+        <div x-if="responsedata.image" style="max-height: 1000px;">
+            <img :src="responsedata.image">
         </div>
 
     </div>
