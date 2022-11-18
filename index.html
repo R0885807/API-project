@@ -7,8 +7,8 @@
     <script defer src="https://unpkg.com/alpinejs@3.5.0/dist/cdn.min.js"></script>
 </head>
 
-<body style="font-family: Verdana, Geneva, Tahoma, sans-serif;">
-    <div class="container" style="background-color: beige;">
+<body style="font-family: Verdana, Geneva, Tahoma, sans-serif; background-color: beige;">
+    <div class="container" >
         <div x-data="{
             responsedata: {},
             async getData() {
@@ -37,8 +37,7 @@
                     <strong x-text="responsedata.year">Placeholder</strong>
                 </li>
             </ol>
-            <strong x-text="responsedata.name">Placeholder</strong>
-            <div x-if="responsedata.image" style="width: 300px;">
+            <div x-if="responsedata.image" style="max-width: 300px;">
                 <img :src="responsedata.image">
             </div>
 
