@@ -41,6 +41,6 @@ async def get_guitar(guitar_key: int | None = Query(default=None, ge=0, lt= len(
         return guitars[guitar_key]
 
 @app.put("/guitars/{guitar_key}")
-async def get_guitar(*, guitar_key: int = Path(ge=0, lt= len(guitars)), guitar: Guitar):
+async def get_guitar(*, guitar_key: int = Path(default=None, ge=0, lt= len(guitars)), guitar: Guitar):
     guitars[guitar_key] = guitar
     return guitars[guitar_key]
