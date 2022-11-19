@@ -92,14 +92,15 @@ async def create_guitar(guitar: Guitar):
     return guitars[new_key]
 
 @app.get("/guitars")
-async def get_guitar(guitar_key: int | None = Query(default=None, ge=0, lt= len(guitars))):
-    if guitar_key:
-        return guitars[guitar_key]
-    else:
-        guitar_key = randint(0, len(guitars)-1)
-        return guitars[guitar_key]
+async def get_guitar():
+    guitar_key = randint(0, len(guitars)-1)
+    return guitars[guitar_key]
+
+@app.get("/guitars/{guitar_key}")
+async def get_guitarbyid(*, guitar_key: int | None = Query(default=None, ge=0, lt= len(guitars))):
+    return guitars[guitar_key]
 
 @app.put("/guitars/{guitar_key}")
-async def get_guitar(*, guitar_key: int = Path(default=None, ge=0, lt= len(guitars)), guitar: Guitar):
+async def put_guitar(*, guitar_key: int = Path(default=None, ge=0, lt= len(guitars)), guitar: Guitar):
     guitars[guitar_key] = guitar
     return guitars[guitar_key]
