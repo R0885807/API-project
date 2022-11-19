@@ -24,9 +24,17 @@ Get endpoint 2: https://guitar-service-r0885807.cloud.okteto.net/guitars/{guitar
 
 Post endpoint: https://guitar-service-r0885807.cloud.okteto.net/guitars. Hiermee kan je een object posten naar de api.
 
-![Get "/guitars/{guitar_id}"](https://github.com/R0885807/api-project/blob/main/screenshots/Post%20guitars.png)
+![Post "/guitars"](https://github.com/R0885807/api-project/blob/main/screenshots/Post%20guitars.png)
 ### Put endpoint
 
 Put endpoint: https://guitar-service-r0885807.cloud.okteto.net/guitars/{guitar_id}. Hiermee pas je een object aan met als key guitar_id.
 
+![Put "/guitars/{guitar_id}"](https://github.com/R0885807/api-project/blob/main/screenshots/Put%20guitars-guitarid.png)
+
 ## Full OpenApi docs
+![](https://github.com/R0885807/api-project/blob/main/screenshots/openapidocs.png)
+
+![](https://github.com/R0885807/api-project/blob/main/screenshots/Getdocs.png)
+![](https://github.com/R0885807/api-project/blob/main/screenshots/getdocs2.png)
+![](https://github.com/R0885807/api-project/blob/main/screenshots/postdocs.png)
+![](https://github.com/R0885807/api-project/blob/main/screenshots/putdocs.png)
