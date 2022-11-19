@@ -12,4 +12,4 @@ De front-end is gehost via **github pages**, **[Front-End](https://r0885807.gith
 
 ### Get endpoint 1
 
-![Get "/guitars"](https://github.com/R0885807/api-project/screenshots)
+![Get "/guitars"](https://github.com/R0885807/api-project/blob/main/screenshots/Get%20guitars.png)
