@@ -25,23 +25,19 @@
 
             <button x-on:click="getData">Geef een gitaar</button>
             <ul style="list-style-type: none;">
-                <li>
+                <li>Naam: 
                     <strong x-text="responsedata1.name">Placeholder</strong>
                 </li>
-                <li>
+                <li>Merk: 
                     <strong x-text="responsedata1.brand">Placeholder</strong>
                 </li>
-                <li>
+                <li>Prijs: 
                     <strong x-text="responsedata1.price">Placeholder</strong>
                 </li>
-                <li>
+                <li>Jaar: 
                     <strong x-text="responsedata1.year">Placeholder</strong>
                 </li>
             </ul>
-            <p>
-                <label for="guitar_id">Geef een gitaar_id</label>
-                <input type="number" id="guitar_id" name="guitar_id" min="0" max="7" step="1" value="0" x-model="query">    
-            </p>
             <div x-if="responsedata1.image">
                 <img :src="responsedata1.image" style="width: 300px; border: 5px solid darkslategray">
             </div>
@@ -71,16 +67,16 @@
                     <button x-on:click="getDatamultiple">Geef de gitaar</button>
                 </p>
                 <ul style="list-style-type: none;">
-                    <li>
+                    <li>Naam: 
                         <strong x-text="responsedata2.name">Placeholder</strong>
                     </li>
-                    <li>
+                    <li>Merk: 
                         <strong x-text="responsedata2.brand">Placeholder</strong>
                     </li>
-                    <li>
+                    <li>Prijs: 
                         <strong x-text="responsedata2.price">Placeholder</strong>
                     </li>
-                    <li>
+                    <li>Jaar: 
                         <strong x-text="responsedata2.year">Placeholder</strong>
                     </li>
                 </ul>
