@@ -10,12 +10,10 @@
     <div class="container" >
         <div x-data="{
             responsedata1: {},
-            url: '',
+
             async getData() {
                 this.responsedata1 = await (await fetch('https://guitar-service-r0885807.cloud.okteto.net/guitars')).json();
                 console.log(this.responsedata1);
-                this.url = 'https://guitar-service-r0885807.cloud.okteto.net/guitars/';
-                console.log(this.url);
             }
             
         
@@ -40,6 +38,10 @@
                     <strong x-text="responsedata1.year">Placeholder</strong>
                 </li>
             </ol>
+            <p>
+                <label for="guitar_id">Geef een gitaar_id</label>
+                <input type="number" id="guitar_id" name="guitar_id" min="0" max="7" step="1" value="0" x-model="query">    
+            </p>
             <div x-if="responsedata1.image">
                 <img :src="responsedata1.image" style="width: 300px; border: 5px solid darkslategray">
             </div>
@@ -50,7 +52,7 @@
             </h3>
         <div x-data="{
             responsedata2: {},
-            query: {},
+            query: '',
             url: '',
             async getDatamultiple() {
                 console.log(this.query);
