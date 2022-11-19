@@ -48,11 +48,11 @@
         <div x-data="{
             responsedata2: {},
             query: {},
-            url: {},
+            url: 'https://guitar-service-r0885807.cloud.okteto.net/guitars/',
             async getDatamultiple() {
                 console.log(this.query)
                 
-                this.url = 'https://guitar-service-r0885807.cloud.okteto.net/guitars/' + this.query
+                this.url += this.query
                 console.log(this.url)
                 this.responsedata2 = await (await fetch('this.url)).json()
                 console.log(this.responsedata2)
