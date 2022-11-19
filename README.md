@@ -12,4 +12,12 @@ De front-end is gehost via **github pages**, **[Front-End](https://r0885807.gith
 
 ### Get endpoint 1
 
+Get endpoint 1: https://guitar-service-r0885807.cloud.okteto.net/guitars. Geeft een object terug met data over een willekeurige gitaar.
+
 ![Get "/guitars"](https://github.com/R0885807/api-project/blob/main/screenshots/Get%20guitars.png)
+
+### Get endpoint 2
+
+Get endpoint 2: https://guitar-service-r0885807.cloud.okteto.net/guitars/{guitar_id}. Geeft een object terug met data over de gitaar met als key guitar_id.
+
+![Get "/guitars/{guitar_id}"](https://github.com/R0885807/api-project/blob/main/screenshots/Get%20guitars-guitarid.png)
