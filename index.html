@@ -47,9 +47,12 @@
             </h3>
         <div x-data="{
             responsedata2: {},
-            query: {},
+            query: '',
+            url: '',
             async getDatamultiple() {
-                this.responsedata2 = await (await fetch('https://guitar-service-r0885807.cloud.okteto.net/guitars/this.query')).json()
+
+                this.url = 'https://guitar-service-r0885807.cloud.okteto.net/guitars' + this.query
+                this.responsedata2 = await (await fetch('this.url)).json()
                 console.log(this.responsedata2)
                 console.log(this.query)
             }
