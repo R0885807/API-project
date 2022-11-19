@@ -10,35 +10,55 @@
 <body style="font-family: Verdana, Geneva, Tahoma, sans-serif; background-color: rgb(190, 199, 209);">
     <div class="container" >
         <div x-data="{
-            responsedata: {},
+            query: '',
+            responsedata1: {},
             async getData() {
-                this.responsedata = await (await fetch('https://guitar-service-r0885807.cloud.okteto.net/guitars')).json();
-                console.log(this.responsedata)
+                this.responsedata1 = await (await fetch('https://guitar-service-r0885807.cloud.okteto.net/guitars')).json();
+                console.log(this.responsedata1)
+            }
+            responsedata2
+            async getDatamultiple() {
+                this.responsedata2 = await (await fetch('https://guitar-service-r0885807.cloud.okteto.net/guitars/${this.query}')).json()
+                console.log(this.responsedata2)
             }
         
         }
         ">
-        <h1>Guitar API!</h1>
-        <hr>
-        <h3>Geef een willekeurige gitaar:</h3>
+            <h1>Guitar API!</h1>
+            <hr>
+            <h3>Geef een willekeurige gitaar:</h3>
 
             <button x-on:click="getData">Geef een gitaar!</button>
             <ul>
                 <li>
-                    <strong x-text="responsedata.name">Placeholder</strong>
+                    <strong x-text="responsedata1.name">Placeholder</strong>
                 </li>
                 <li>
-                    <strong x-text="responsedata.brand">Placeholder</strong>
+                    <strong x-text="responsedata1.brand">Placeholder</strong>
                 </li>
                 <li>
-                    <strong x-text="responsedata.price">Placeholder</strong>
+                    <strong x-text="responsedata1.price">Placeholder</strong>
                 </li>
                 <li>
-                    <strong x-text="responsedata.year">Placeholder</strong>
+                    <strong x-text="responsedata1.year">Placeholder</strong>
                 </li>
             </ol>
-            <div x-if="responsedata.image">
-                <img :src="responsedata.image" style="width: 300px; border: 5px solid darkslategray">
+            <div x-if="responsedata1.image">
+                <img :src="responsedata1.image" style="width: 300px; border: 5px solid darkslategray">
+            </div>
+            <br>
+            <br>
+            <h3>
+                Geef een aantal gitaren:
+            </h3>
+            <div>
+                <p>
+                    <label for="guitar_id">Geef een gitaar_id</label>
+                    <input type="number" id="guitar_id" name="guitar_id" min="0" max="7" step="1" value="0" x-model="query">    
+                </p>
+                <p>
+                    <button x-on:click="getDatamultiple"></button>
+                </p>
             </div>
 
         </div>
