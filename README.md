@@ -1,7 +1,8 @@
 # API-project
 
 - Mijn hosted **API** link: **https://guitar-service-r0885807.cloud.okteto.net**
-- Mijn hosted **front-end** link: **https://r0885807.github.io/api-project/**
+- Mijn front-end **repo** link: **https://github.com/R0885807/api-frontend**
+- Mijn hosted **front-end** link: **https://r0885807.github.io/api-frontend/**
 
 
 ## Beschrijving
@@ -27,3 +28,5 @@ Post endpoint: https://guitar-service-r0885807.cloud.okteto.net/guitars. Hiermee
 ### Put endpoint
 
 Put endpoint: https://guitar-service-r0885807.cloud.okteto.net/guitars/{guitar_id}. Hiermee pas je een object aan met als key guitar_id.
+
+## Full OpenApi docs
