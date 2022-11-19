@@ -10,9 +10,12 @@
     <div class="container" >
         <div x-data="{
             responsedata1: {},
+            url: '',
             async getData() {
                 this.responsedata1 = await (await fetch('https://guitar-service-r0885807.cloud.okteto.net/guitars')).json();
-                console.log(this.responsedata1)
+                console.log(this.responsedata1);
+                this.url = 'https://guitar-service-r0885807.cloud.okteto.net/guitars/';
+                console.log(this.url);
             }
             
         
@@ -50,13 +53,13 @@
             query: {},
             url: '',
             async getDatamultiple() {
-                console.log(this.query)
+                console.log(this.query);
                 
-                this.url = 'https://guitar-service-r0885807.cloud.okteto.net/guitars/'' + this.query
-                console.log(this.url)
-                this.responsedata2 = await (await fetch(this.url)).json()
-                console.log(this.responsedata2)
-                console.log(this.query)
+                this.url = 'https://guitar-service-r0885807.cloud.okteto.net/guitars/' + this.query;
+                console.log(this.url);
+                this.responsedata2 = await (await fetch(this.url)).json();
+                console.log(this.responsedata2);
+                console.log(this.query);
             }
         }">
                 <p>
